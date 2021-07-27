@@ -1,17 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sean's GitHub Profiles App</title>
-</head>
-<body>
-    
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Sean's GitHub Profiles App</title>
+	</head>
+	<body>
+		<!--
+        User story:
+            -Home page should be a form input with the placeholder "Search a Github User"
+            -Default user on the home page should be me "sean21johnson"
+            -User types in a github user in the input box and presses enter
+            -When enter is pressed, need to feed the API the username that was searched and include in the endpoint the username
+            -API will deliver a response back and we will need to pull from the response the following from the GitHub Profile that was searched:
+                -Name
+                -Image
+                -Biography
+                -Number of followers
+                -Number of people the profile follows
+                -Number of repos
+                -List of popular or whichever repose are provided (only include the first 10)
 
-    
+        Sections:
+            -Form with user input, let's include this in the actual index.html module
+            -The other section will just be a container to hold an individual github profile
 
-    <script src="script.js"></script>
-</body>
+    -->
+
+		<section class="upper_container">
+			<form class="form" id="form">
+				<input type="text" name="profile" class="search_input" id="search_input" placeholder="Search a Github User" />
+				<label name="profile"></label>
+			</form>
+		</section>
+
+		<section class="lower_container" id="lower_container">
+			<div class="image_container" id="image_container"></div>
+			<div class="lower_right_container" id="lower_right_container">
+				<div class="name_container" id="name_container">
+					<h1 class="github_name" id="github_name"></h1>
+				</div>
+				<div class="bio_container">
+					<p class="github_bio" id="github_bio"></p>
+				</div>
+				<div class="numbers_container" id="numbers_container">
+					<div class="followers_container" id="followers_container">
+						<p class="github_followers" id="github_followers"></p>
+					</div>
+					<div class="following_container" id="followering_container">
+						<p class="github_following" id="github_following"></p>
+					</div>
+					<div class="repos_container" id="repos_container">
+						<p class="github_repos" id="github_repos"></p>
+					</div>
+				</div>
+				<div class="projects_container"></div>
+                    <ul class="projects_list" id="projects_list"></ul>
+			</div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
 </html>
